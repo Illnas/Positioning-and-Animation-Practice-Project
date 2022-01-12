@@ -390,16 +390,27 @@ header nav ul li:first-child {
 
 .fish svg {
   animation: fish 5s infinite;
-  animation-direction: alternate;
 }
 
 @keyframes fish {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) rotateY(0);
+  }
+
+  54% {
+    transform: translateX(calc(80vw - 80px)) rotateY(0);
+  }
+
+  55% {
+    transform: translateX(calc(80vw - 80px)) rotateY(180deg);
+  }
+
+  99% {
+    transform: translateX(0) rotateY(180deg);
   }
 
   100% {
-    transform: translateX(calc(80vw - 80px)) rotateY(180deg);
+    transform: translateX(0) rotateY(0);
   }
 
 }
